@@ -5,6 +5,7 @@
 package br.jsf;
 
 import br.ejb.EjbJogada;
+import br.ejb.EjbJogo;
 import br.model.Jogada;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
@@ -20,6 +21,9 @@ import lombok.Data;
 @Named(value = "jsfJogada")
 @SessionScoped
 public class JsfJogada implements Serializable {
+
+    @EJB
+    private EjbJogo ejbJogo;
 
     @EJB
     private EjbJogada ejbJogada;
@@ -40,4 +44,7 @@ public class JsfJogada implements Serializable {
     public Jogada getAll(){
         return ejbJogada.getJogada();
     }
+    
+    
+    
 }

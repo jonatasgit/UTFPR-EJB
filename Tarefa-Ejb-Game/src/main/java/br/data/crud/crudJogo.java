@@ -14,8 +14,8 @@ import java.util.Random;
 public class crudJogo {
     public Jogo obterJogo(){        
         Jogo j  = new Jogo();
-        j.setNum1(this.obterRandom());
-        j.setNum2(this.obterRandom());
+        j.setNum1(77);
+        j.setNum2(23);
         
         return j;
     }

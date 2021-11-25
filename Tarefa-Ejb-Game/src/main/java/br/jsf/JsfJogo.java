@@ -29,7 +29,9 @@ public class JsfJogo {
     
     public Jogo getGame(){
         System.out.println("Entrou Jsf Jogo");
-        return ejbJogo.obterJogo();        
+        Jogo j = ejbJogo.obterJogo();        
+        System.err.println("JOGO - N1 " + j.getNum1() + " N2 - " + j.getNum2());
+        return j;
     }
     
     
