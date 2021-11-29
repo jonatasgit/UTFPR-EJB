@@ -10,6 +10,7 @@ import br.model.Jogada;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
+import java.util.List;
 import javax.ejb.EJB;
 import lombok.Data;
 
@@ -41,8 +42,8 @@ public class JsfJogada implements Serializable {
         ejbJogada.addJogada(this.jogador, n1, n2, this.tentativa);
     }
     
-    public Jogada getAll(){
-        return ejbJogada.getJogada();
+    public List<Jogada> getAll(){
+        return ejbJogada.getJogadas();
     }
     
     
